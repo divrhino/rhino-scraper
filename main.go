@@ -42,3 +42,6 @@ func main() {
 
 	collector.Visit("https://www.factretriever.com/rhino-facts")
 }
+
+func writeJSON(data []Fact) {
+}
