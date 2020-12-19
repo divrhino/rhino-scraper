@@ -24,5 +24,7 @@ func main() {
 		if err != nil {
 			log.Println("Could not get id")
 		}
+
+		factDesc := element.Text
 	})
 }
