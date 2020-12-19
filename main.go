@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"strconv"
@@ -44,4 +45,5 @@ func main() {
 }
 
 func writeJSON(data []Fact) {
+	file, err := json.MarshalIndent(data, "", " ")
 }
