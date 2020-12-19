@@ -39,4 +39,6 @@ func main() {
 	collector.OnRequest(func(request *colly.Request) {
 		fmt.Println("Visiting", request.URL.String())
 	})
+
+	collector.Visit("https://www.factretriever.com/rhino-facts")
 }
