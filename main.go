@@ -46,4 +46,8 @@ func main() {
 
 func writeJSON(data []Fact) {
 	file, err := json.MarshalIndent(data, "", " ")
+	if err != nil {
+		log.Println("Unable to create json file")
+		return
+	}
 }
