@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"strconv"
 
@@ -50,4 +51,6 @@ func writeJSON(data []Fact) {
 		log.Println("Unable to create json file")
 		return
 	}
+
+	_ = ioutil.WriteFile("rhinofacts.json", file, 0644)
 }
