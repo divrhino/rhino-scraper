@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"strconv"
 
@@ -34,4 +35,10 @@ func main() {
 
 		allFacts = append(allFacts, fact)
 	})
+
+	collector.OnRequest(func(request *colly.Request) {
+		fmt.Println("Visiting", request.URL.String())
+	})
+
+	collector.Visit("https://www.factretriever.com/rhino-facts")
 }
