@@ -5,4 +5,6 @@ type Fact struct {
 	Description string `json:"description"`
 }
 
-func main() {}
+func main() {
+	allFacts := make([]Fact, 0)
+}
