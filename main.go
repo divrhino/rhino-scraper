@@ -26,5 +26,10 @@ func main() {
 		}
 
 		factDesc := element.Text
+
+		fact := Fact{
+			ID:          factId,
+			Description: factDesc,
+		}
 	})
 }
