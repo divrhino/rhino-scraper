@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"strconv"
 
 	"github.com/gocolly/colly"
@@ -20,5 +21,8 @@ func main() {
 
 	collector.OnHTML(".factsList li", func(element *colly.HTMLElement) {
 		factId, err := strconv.Atoi(element.Attr("id"))
+		if err != nil {
+			log.Println("Could not get id")
+		}
 	})
 }
