@@ -31,5 +31,7 @@ func main() {
 			ID:          factId,
 			Description: factDesc,
 		}
+
+		allFacts = append(allFacts, fact)
 	})
 }
