@@ -43,6 +43,8 @@ func main() {
 	})
 
 	collector.Visit("https://www.factretriever.com/rhino-facts")
+
+	writeJSON(allFacts)
 }
 
 func writeJSON(data []Fact) {
