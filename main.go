@@ -13,4 +13,8 @@ func main() {
 	collector := colly.NewCollector(
 		colly.AllowedDomains("factretriever.com", "www.factretriever.com"),
 	)
+
+	collector.OnHTML(".factsList li", func(element *colly.HTMLElement) {
+		//
+	})
 }
