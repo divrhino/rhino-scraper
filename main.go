@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gocolly/colly"
+import (
+	"strconv"
+
+	"github.com/gocolly/colly"
+)
 
 type Fact struct {
 	ID          int    `json:"id"`
@@ -15,6 +19,6 @@ func main() {
 	)
 
 	collector.OnHTML(".factsList li", func(element *colly.HTMLElement) {
-		//
+		factId, err := strconv.Atoi(element.Attr("id"))
 	})
 }
